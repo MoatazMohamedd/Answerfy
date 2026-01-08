@@ -1,8 +1,8 @@
 # Answerfy
 
-Answerfy is a Retrieval-Augmented Generation (RAG) demo application that allows users to upload company or project PDFs and then ask natural-language questions about them. The system embeds the PDF text into a vector database and retrieves the most relevant chunks to ground the language model responses.
+Answerfy is a Retrieval Augmented Generation (RAG) demo application that allows users to upload company or project PDFs and then ask natural language questions about them. The system embeds the PDF text into a vector database and retrieves the most relevant chunks to ground the language model responses.
 
-This project is intended as a portfolio and demonstration of building an end-to-end RAG stack using modern tools:
+This project is intended as a portfolio and demonstration of building an end to end RAG stack using modern tools:
 
 - Backend: .NET 8 Web API (C#)
 - Frontend: Angular 18
@@ -10,7 +10,7 @@ This project is intended as a portfolio and demonstration of building an end-to-
 - Vector database via Qdrant (Docker)
 - PDF parsing via PDFPig
 
-Answerfy is English-only and currently intended as a personal learning and demo project rather than a production system.
+This is tested for English only documents/questions and currently intended as a personal learning and demo project rather than a production system.
 
 ---
 
@@ -19,29 +19,13 @@ Answerfy is English-only and currently intended as a personal learning and demo 
 - Upload multiple PDF documents
 - Text is chunked and embedded automatically
 - Documents are stored and indexed in Qdrant
-- Users can ask natural-language questions
+- Users can ask natural language questions
 - The system retrieves the most relevant chunks and sends them to the LLM
 - Responses are always grounded in the uploaded PDFs
 
 Conversation history is not used as context. Each question is processed independently.
 
 ---
-
-## High-Level Architecture
-
-Angular Frontend
-|
-v
-.NET 8 Web API
-|
-v
-Qdrant Vector DB <---- embeddings via Ollama
-|
-v
-Local LLM via Ollama
-
----
-
 ## Tech Stack
 
 ### Backend
@@ -82,7 +66,7 @@ The project runs entirely locally. You will need:
 
 ## 1. Install and Start Ollama
 
-Download Ollama from [https://ollama.ai](https://ollama.ai).
+Download Ollama from [https://ollama.ai](https://ollama.ai)
 
 Then pull the required models:
 
