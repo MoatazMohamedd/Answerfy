@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartera3S-RAG", "Smartera3S-RAG\Smartera3S-RAG.csproj", "{B1791629-AB3C-4C84-A86C-5A45407C372F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1791629-AB3C-4C84-A86C-5A45407C372F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1791629-AB3C-4C84-A86C-5A45407C372F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1791629-AB3C-4C84-A86C-5A45407C372F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1791629-AB3C-4C84-A86C-5A45407C372F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EEB876D-07FD-4EE8-80D5-10A1C34BAFAF}
+	EndGlobalSection
+EndGlobal

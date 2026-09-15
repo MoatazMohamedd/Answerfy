@@ -1,0 +1,66 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h2 class="chat-title">Chat Assistant</h2>
+    <p class="chat-subtitle">Ask me anything about your documents</p>
+  </div>
+
+  <div class="chat-messages" #messagesContainer>
+    @for (message of messages; track $index) {
+    <div
+      class="message-wrapper"
+      [ngClass]="{
+        'user-message': message.role === 'user',
+        'assistant-message': message.role === 'assistant'
+      }"
+    >
+      <div class="message-bubble">
+        <div class="message-content">{{ message.content }}</div>
+        <div class="message-time">{{ formatTime(message.timestamp) }}</div>
+      </div>
+    </div>
+    } @if (isLoading) {
+    <div class="message-wrapper assistant-message">
+      <div class="message-bubble">
+        <div class="loading-indicator">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <div class="chat-input-container">
+    <div class="input-wrapper">
+      <textarea
+        [(ngModel)]="userQuery"
+        (keydown)="onKeyPress($event)"
+        placeholder="Type your message here..."
+        class="chat-input"
+        [disabled]="isLoading"
+      ></textarea>
+      <button
+        (click)="sendMessage()"
+        [disabled]="!userQuery.trim() || isLoading"
+        class="send-button"
+        type="button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

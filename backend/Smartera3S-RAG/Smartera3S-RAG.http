@@ -1,0 +1,6 @@
+@Smartera3S_RAG_HostAddress = http://localhost:5177
+
+GET {{Smartera3S_RAG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
